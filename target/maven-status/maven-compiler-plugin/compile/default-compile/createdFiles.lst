@@ -1,0 +1,9 @@
+com\notesapi\helper\NotesHelper.class
+com\notesapi\utils\SpecificationBuilder.class
+com\notesapi\constants\EndPoints.class
+extentreport\ReportManager.class
+com\notesapi\utils\RestUtils.class
+extentreport\ListenerClass.class
+com\notesapi\utils\TestUtils.class
+com\notesapi\helper\UsersHelper.class
+extentreport\ReportLogger.class

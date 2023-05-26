@@ -1,0 +1,8 @@
+com\notesapi\pojos\Users$UsersBuilder.class
+com\notesapi\payloads\NotesPayload.class
+com\notesapi\tests\UsersTests.class
+com\notesapi\pojos\Notes.class
+com\notesapi\pojos\Users.class
+com\notesapi\payloads\UsersPayload.class
+com\notesapi\tests\NotesTests.class
+com\notesapi\pojos\Notes$NotesBuilder.class

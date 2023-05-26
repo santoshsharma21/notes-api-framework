@@ -3,6 +3,8 @@
  */
 package com.notesapi.utils;
 
+import com.notesapi.constants.EndPoints;
+
 import io.restassured.builder.RequestSpecBuilder;
 import io.restassured.builder.ResponseSpecBuilder;
 import io.restassured.filter.log.LogDetail;
@@ -18,7 +20,9 @@ public class SpecificationBuilder {
 	
 	public static RequestSpecification getRequestSpecification(Object payload) {
 		RequestSpecBuilder spec = new RequestSpecBuilder();
-		spec.setContentType(ContentType.JSON)
+		spec
+			.setBaseUri(EndPoints.BASE_URL)
+		    .setContentType(ContentType.JSON)
 			.setAccept(ContentType.JSON)
 			.setBody(payload)
 			.log(LogDetail.ALL);
@@ -29,7 +33,9 @@ public class SpecificationBuilder {
 	
 	public static RequestSpecification getRequestSpecification() {
 		RequestSpecBuilder spec = new RequestSpecBuilder();
-		spec.setContentType(ContentType.JSON)
+		spec
+			.setBaseUri(EndPoints.BASE_URL)
+			.setContentType(ContentType.JSON)
 			.setAccept(ContentType.JSON)
 			.log(LogDetail.ALL);
 		
@@ -39,7 +45,8 @@ public class SpecificationBuilder {
 	
 	public static ResponseSpecification getResponseSpecification() {
 		ResponseSpecBuilder spec = new ResponseSpecBuilder();
-		spec.expectContentType(ContentType.JSON);
+		spec
+			.expectContentType(ContentType.JSON);
 		
 		ResponseSpecification responseSpec = spec.build();
 		return responseSpec;	
