@@ -24,7 +24,7 @@ public class UsersPayload {
 		faker = new Faker();
 		name = faker.name().name();
 		email = faker.internet().emailAddress();
-		password = faker.internet().password(5, 10);
+		password = faker.internet().password(10, 15);
 		return Users.builder().name(name).email(email).password(password).build();
 	}
 
@@ -41,7 +41,7 @@ public class UsersPayload {
 	}
 
 	public static Users userPasswordChangePayload() {
-		newPassword = faker.internet().password(6, 10);
+		newPassword = faker.internet().password(10, 15);
 
 		return Users.builder().currentPassword(password).newPassword(newPassword).build();
 	}

@@ -3,10 +3,14 @@
  */
 package com.notesapi.utils;
 
+import com.notesapi.extentreport.ReportLogger;
+
 import io.restassured.RestAssured;
 import io.restassured.response.Response;
+import io.restassured.specification.QueryableRequestSpecification;
 import io.restassured.specification.RequestSpecification;
 import io.restassured.specification.ResponseSpecification;
+import io.restassured.specification.SpecificationQuerier;
 
 /**
  * @author Santosh Sharma
@@ -20,6 +24,9 @@ public class RestUtils {
 		ResponseSpecification resSpec = SpecificationBuilder.getResponseSpecification();
 		Response response = RestAssured.given().spec(reqSpec).when().post(endpoint).then().spec(resSpec).log().all()
 				.extract().response();
+
+		printRequestDetails(reqSpec, endpoint, "POST", new Object());
+		printResponseDetails(response);
 		return response;
 	}
 
@@ -29,6 +36,9 @@ public class RestUtils {
 		Response response = RestAssured.given().spec(reqSpec).header("x-auth-token", token)
 
 				.when().post(endpoint).then().spec(resSpec).log().all().extract().response();
+
+		printRequestDetails(reqSpec, endpoint, "POST", new Object());
+		printResponseDetails(response);
 		return response;
 	}
 
@@ -41,6 +51,9 @@ public class RestUtils {
 				.when().get(endpoint)
 
 				.then().spec(resSpec).log().body().extract().response();
+
+		printRequestDetails(reqSpec, endpoint, "GET");
+		printResponseDetails(response);
 		return response;
 	}
 
@@ -52,18 +65,24 @@ public class RestUtils {
 				.when().get(endpoint)
 
 				.then().spec(resSpec).log().body().extract().response();
+		
+		printRequestDetails(reqSpec, endpoint, "GET");
+		printResponseDetails(response);
 		return response;
 	}
 
 	// PUT REQUEST
-	public static Response put(String endPoint, Object payload, String token) {
+	public static Response put(String endpoint, Object payload, String token) {
 		RequestSpecification reqSpec = SpecificationBuilder.getRequestSpecification(payload);
 		ResponseSpecification resSpec = SpecificationBuilder.getResponseSpecification();
 		Response response = RestAssured.given().spec(reqSpec).header("x-auth-token", token)
 
-				.when().put(endPoint)
+				.when().put(endpoint)
 
 				.then().spec(resSpec).log().body().extract().response();
+		
+		printRequestDetails(reqSpec, endpoint, "PUT", new Object());
+		printResponseDetails(response);
 		return response;
 	}
 
@@ -75,6 +94,9 @@ public class RestUtils {
 				.when().put(endpoint)
 
 				.then().spec(resSpec).log().body().extract().response();
+		
+		printRequestDetails(reqSpec, endpoint, "PUT", new Object());
+		printResponseDetails(response);
 		return response;
 	}
 
@@ -87,6 +109,9 @@ public class RestUtils {
 				.when().patch(endpoint)
 
 				.then().spec(resSpec).log().body().extract().response();
+		
+		printRequestDetails(reqSpec, endpoint, "PATCH", new Object());
+		printResponseDetails(response);
 		return response;
 	}
 
@@ -98,6 +123,9 @@ public class RestUtils {
 				.when().patch(endpoint)
 
 				.then().spec(resSpec).log().body().extract().response();
+		
+		printRequestDetails(reqSpec, endpoint, "PATCH", new Object());
+		printResponseDetails(response);
 		return response;
 	}
 
@@ -110,6 +138,9 @@ public class RestUtils {
 				.when().delete(endpoint)
 
 				.then().spec(resSpec).log().body().extract().response();
+		
+		printRequestDetails(reqSpec, endpoint, "DELETE");
+		printResponseDetails(response);
 		return response;
 	}
 
@@ -121,7 +152,36 @@ public class RestUtils {
 				.when().delete(endpoint)
 
 				.then().spec(resSpec).log().body().extract().response();
+		
+		printRequestDetails(reqSpec, endpoint, "DELETE");
+		printResponseDetails(response);
 		return response;
+	}
+    
+	public static void printRequestDetails(RequestSpecification requestSpec, String endpoint, String method, Object empty) {
+		QueryableRequestSpecification reqQuery = SpecificationQuerier.query(requestSpec);
+		ReportLogger.logInfoDetails("Endpoint - " + endpoint);
+		ReportLogger.logInfoDetails("Request Method - " + method);
+		ReportLogger.logInfoDetails("Request Headers");
+		ReportLogger.logHeaderInTableFormat(reqQuery.getHeaders().asList());
+		ReportLogger.logInfoDetails("Request Body");
+		ReportLogger.logJsonDetails(reqQuery.getBody().toString());
+	}
+	
+	public static void printRequestDetails(RequestSpecification requestSpec, String endpoint, String method) {
+		QueryableRequestSpecification reqQuery = SpecificationQuerier.query(requestSpec);
+		ReportLogger.logInfoDetails("Endpoint - " + endpoint);
+		ReportLogger.logInfoDetails("Request Method - " + method);
+		ReportLogger.logInfoDetails("Request Headers");
+		ReportLogger.logHeaderInTableFormat(reqQuery.getHeaders().asList());
+	}
+
+	public static void printResponseDetails(Response response) {
+		ReportLogger.logInfoDetails("Status code - " + response.getStatusCode());
+		ReportLogger.logInfoDetails("Response Headers");
+		ReportLogger.logHeaderInTableFormat(response.getHeaders().asList());
+		ReportLogger.logInfoDetails("Response Details");
+		ReportLogger.logJsonDetails(response.getBody().prettyPrint());
 	}
 
 }

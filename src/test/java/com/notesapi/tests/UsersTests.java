@@ -41,7 +41,7 @@ public class UsersTests {
 		xAuthToken = TestUtils.getStringValuefromJsonObject(response, "data", "token");
 		context.setAttribute("token", xAuthToken);
 		
-		Assert.assertEquals(response.getStatusCode(), 200);
+		Assert.assertEquals(response.getStatusCode(), 201);
 		Assert.assertEquals(response.jsonPath().getString("message"), "Login successful");
 		Assert.assertEquals(TestUtils.getStringValuefromJsonObject(response, "data", "email"), requestPayload.getEmail());
 	}

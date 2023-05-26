@@ -25,7 +25,7 @@
       <span class="top-banner-title-font">Test results</span>
       <button id="button" class="button">Switch Retro Theme</button> <!-- button -->
       <br/>
-      <span class="top-banner-font-1">1 suite</span>
+      <span class="top-banner-font-1">1 suite, 1 failed test</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -39,7 +39,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" panel-name="suite-Suite" class="navigator-link">
-              <span class="suite-name border-passed">Suite</span>
+              <span class="suite-name border-failed">Suite</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -92,7 +92,21 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">11 methods,   11 passed</span>
+                    <span class="method-stats">11 methods, 1 failed,   10 passed</span>
+                  </li>
+                  <li>
+                    <span class="method-list-title failed">Failed methods</span>
+                    <span class="show-or-hide-methods failed">
+                      <a href="#" panel-name="suite-Suite" class="hide-methods failed suite-Suite"> (hide)</a> <!-- hide-methods failed suite-Suite -->
+                      <a href="#" panel-name="suite-Suite" class="show-methods failed suite-Suite"> (show)</a> <!-- show-methods failed suite-Suite -->
+                    </span>
+                    <div class="method-list-content failed suite-Suite">
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="com.notesapi.tests.UsersTests" class="method navigator-link" hash-for-method="performLogin(org.testng.TestRunner@441aa7ae)">performLogin(org.testng.TestRunner@441aa7ae)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content failed suite-Suite -->
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -124,11 +138,6 @@
                       <span>
                         <img src="passed.png" width="3%"/>
                         <a href="#" panel-name="suite-Suite" title="com.notesapi.tests.UsersTests" class="method navigator-link" hash-for-method="editUserPassword">editUserPassword</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Suite" title="com.notesapi.tests.UsersTests" class="method navigator-link" hash-for-method="performLogin(org.testng.TestRunner@1be3f8f8)">performLogin(org.testng.TestRunner@1be3f8f8)</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
@@ -168,6 +177,27 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-Suite" class="panel Suite">
+          <div class="suite-Suite-class-failed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="failed.png"/>
+              <span class="class-name">com.notesapi.tests.UsersTests</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="performLogin(org.testng.TestRunner@441aa7ae)">
+                  </a> <!-- performLogin(org.testng.TestRunner@441aa7ae) -->
+                  <span class="method-name">performLogin</span>
+                  <span class="parameters">(org.testng.TestRunner@441aa7ae)</span>
+                  <div class="stack-trace">java.lang.AssertionError: expected [201] but found [200]
+	at com.notesapi.tests.UsersTests.performLogin(UsersTests.java:44)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 37 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Suite-class-failed -->
           <div class="suite-Suite-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
@@ -247,14 +277,6 @@
               </div> <!-- method -->
               <div class="method">
                 <div class="method-content">
-                  <a name="performLogin(org.testng.TestRunner@1be3f8f8)">
-                  </a> <!-- performLogin(org.testng.TestRunner@1be3f8f8) -->
-                  <span class="method-name">performLogin</span>
-                  <span class="parameters">(org.testng.TestRunner@1be3f8f8)</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
                   <a name="retrieveUserInfo">
                   </a> <!-- retrieveUserInfo -->
                   <span class="method-name">retrieveUserInfo</span>
@@ -272,6 +294,9 @@
 &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
 &lt;!DOCTYPE suite SYSTEM &quot;https://testng.org/testng-1.0.dtd&quot;&gt;
 &lt;suite name=&quot;Suite&quot; guice-stage=&quot;DEVELOPMENT&quot; verbose=&quot;0&quot;&gt;
+  &lt;listeners&gt;
+    &lt;listener class-name=&quot;com.notesapi.extentreport.ListenerClass&quot;/&gt;
+  &lt;/listeners&gt;
   &lt;test thread-count=&quot;5&quot; name=&quot;Test&quot; verbose=&quot;0&quot;&gt;
     &lt;classes&gt;
       &lt;class name=&quot;com.notesapi.tests.UsersTests&quot;/&gt;
@@ -319,47 +344,47 @@ data.addRows(11);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'createNewUser')
 data.setCell(0, 2, 'com.notesapi.tests.UsersTests')
-data.setCell(0, 3, 4803);
+data.setCell(0, 3, 4985);
 data.setCell(1, 0, 1)
-data.setCell(1, 1, 'performLogin')
+data.setCell(1, 1, 'retrieveUserInfo')
 data.setCell(1, 2, 'com.notesapi.tests.UsersTests')
-data.setCell(1, 3, 1880);
+data.setCell(1, 3, 1564);
 data.setCell(2, 0, 2)
 data.setCell(2, 1, 'editUserPassword')
 data.setCell(2, 2, 'com.notesapi.tests.UsersTests')
-data.setCell(2, 3, 875);
+data.setCell(2, 3, 1024);
 data.setCell(3, 0, 3)
-data.setCell(3, 1, 'updateExistingNote')
-data.setCell(3, 2, 'com.notesapi.tests.NotesTests')
-data.setCell(3, 3, 646);
+data.setCell(3, 1, 'performLogin')
+data.setCell(3, 2, 'com.notesapi.tests.UsersTests')
+data.setCell(3, 3, 736);
 data.setCell(4, 0, 4)
 data.setCell(4, 1, 'editUserInfo')
 data.setCell(4, 2, 'com.notesapi.tests.UsersTests')
-data.setCell(4, 3, 644);
+data.setCell(4, 3, 663);
 data.setCell(5, 0, 5)
-data.setCell(5, 1, 'updateCompleteStatusOfNote')
+data.setCell(5, 1, 'updateExistingNote')
 data.setCell(5, 2, 'com.notesapi.tests.NotesTests')
-data.setCell(5, 3, 633);
+data.setCell(5, 3, 656);
 data.setCell(6, 0, 6)
-data.setCell(6, 1, 'deleteNoteById')
+data.setCell(6, 1, 'updateCompleteStatusOfNote')
 data.setCell(6, 2, 'com.notesapi.tests.NotesTests')
-data.setCell(6, 3, 606);
+data.setCell(6, 3, 635);
 data.setCell(7, 0, 7)
 data.setCell(7, 1, 'createNewNote')
 data.setCell(7, 2, 'com.notesapi.tests.NotesTests')
-data.setCell(7, 3, 597);
+data.setCell(7, 3, 599);
 data.setCell(8, 0, 8)
-data.setCell(8, 1, 'retrieveUserInfo')
-data.setCell(8, 2, 'com.notesapi.tests.UsersTests')
-data.setCell(8, 3, 596);
+data.setCell(8, 1, 'deleteNoteById')
+data.setCell(8, 2, 'com.notesapi.tests.NotesTests')
+data.setCell(8, 3, 584);
 data.setCell(9, 0, 9)
 data.setCell(9, 1, 'retrieveNoteById')
 data.setCell(9, 2, 'com.notesapi.tests.NotesTests')
-data.setCell(9, 3, 584);
+data.setCell(9, 3, 582);
 data.setCell(10, 0, 10)
 data.setCell(10, 1, 'retrieveNote')
 data.setCell(10, 2, 'com.notesapi.tests.NotesTests')
-data.setCell(10, 3, 556);
+data.setCell(10, 3, 577);
 window.suiteTableData['Suite']= { tableData: data, tableDiv: 'times-div-Suite'}
 return data;
 }
@@ -396,51 +421,53 @@ return data;
                 <span class="method-start">0 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
-                <span class="method-name">performLogin(org.testng.TestRunner@1be3f8f8)</span>
-                <span class="method-start">4817 ms</span>
+                <img src="failed.png">
+                </img>
+                <span class="method-name">performLogin(org.testng.TestRunner@441aa7ae)</span>
+                <span class="method-start">4997 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">retrieveUserInfo</span>
-                <span class="method-start">6699 ms</span>
+                <span class="method-start">5741 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">editUserInfo</span>
-                <span class="method-start">7299 ms</span>
+                <span class="method-start">7310 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">editUserPassword</span>
-                <span class="method-start">7948 ms</span>
+                <span class="method-start">7977 ms</span>
               </div> <!-- test-method -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">com.notesapi.tests.NotesTests</div> <!-- chronological-class-name -->
               <div class="configuration-class before">
-                <span class="method-name">beforeClass(org.testng.TestRunner@1be3f8f8)</span>
-                <span class="method-start">8829 ms</span>
+                <span class="method-name">beforeClass(org.testng.TestRunner@441aa7ae)</span>
+                <span class="method-start">9004 ms</span>
               </div> <!-- configuration-class before -->
               <div class="test-method">
                 <span class="method-name">createNewNote</span>
-                <span class="method-start">8838 ms</span>
+                <span class="method-start">9012 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">retrieveNote</span>
-                <span class="method-start">9437 ms</span>
+                <span class="method-start">9613 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">retrieveNoteById</span>
-                <span class="method-start">9994 ms</span>
+                <span class="method-start">10192 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">updateExistingNote</span>
-                <span class="method-start">10580 ms</span>
+                <span class="method-start">10775 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">updateCompleteStatusOfNote</span>
-                <span class="method-start">11228 ms</span>
+                <span class="method-start">11435 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">deleteNoteById</span>
-                <span class="method-start">11863 ms</span>
+                <span class="method-start">12074 ms</span>
               </div> <!-- test-method -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

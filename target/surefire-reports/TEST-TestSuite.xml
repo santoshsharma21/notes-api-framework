@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="TestSuite" time="13.49" tests="11" errors="0" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="TestSuite" time="14.596" tests="11" errors="0" skipped="0" failures="1">
   <properties>
     <property name="java.specification.version" value="17"/>
     <property name="sun.cpu.isalist" value="amd64"/>
@@ -15,7 +15,7 @@
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="user.country" value="IN"/>
     <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk-17.0.3.1\bin"/>
-    <property name="sun.java.command" value="C:\Users\Santosh Sharma\AppData\Local\Temp\surefire3283298597112498008\surefirebooter10430337475722926836.jar C:\Users\Santosh Sharma\AppData\Local\Temp\surefire3283298597112498008 2023-05-26T18-54-23_306-jvmRun1 surefire4493066039501576455tmp surefire_05761260184214493040tmp"/>
+    <property name="sun.java.command" value="C:\Users\Santosh Sharma\AppData\Local\Temp\surefire1458329652403063412\surefirebooter4720999625769578565.jar C:\Users\Santosh Sharma\AppData\Local\Temp\surefire1458329652403063412 2023-05-27T01-33-32_169-jvmRun1 surefire14705983207035957727tmp surefire_06324159834866425002tmp"/>
     <property name="jdk.debug" value="release"/>
     <property name="surefire.test.class.path" value="A:\ApiTestingProjects\notesapi\target\test-classes;A:\ApiTestingProjects\notesapi\target\classes;C:\Users\Santosh Sharma\.m2\repository\io\rest-assured\rest-assured\5.3.0\rest-assured-5.3.0.jar;C:\Users\Santosh Sharma\.m2\repository\org\apache\groovy\groovy\4.0.6\groovy-4.0.6.jar;C:\Users\Santosh Sharma\.m2\repository\org\apache\groovy\groovy-xml\4.0.6\groovy-xml-4.0.6.jar;C:\Users\Santosh Sharma\.m2\repository\org\apache\httpcomponents\httpclient\4.5.13\httpclient-4.5.13.jar;C:\Users\Santosh Sharma\.m2\repository\org\apache\httpcomponents\httpcore\4.4.13\httpcore-4.4.13.jar;C:\Users\Santosh Sharma\.m2\repository\commons-logging\commons-logging\1.2\commons-logging-1.2.jar;C:\Users\Santosh Sharma\.m2\repository\org\apache\httpcomponents\httpmime\4.5.13\httpmime-4.5.13.jar;C:\Users\Santosh Sharma\.m2\repository\org\ccil\cowan\tagsoup\tagsoup\1.2.1\tagsoup-1.2.1.jar;C:\Users\Santosh Sharma\.m2\repository\io\rest-assured\xml-path\5.3.0\xml-path-5.3.0.jar;C:\Users\Santosh Sharma\.m2\repository\org\hamcrest\hamcrest\2.2\hamcrest-2.2.jar;C:\Users\Santosh Sharma\.m2\repository\io\rest-assured\json-path\5.3.0\json-path-5.3.0.jar;C:\Users\Santosh Sharma\.m2\repository\org\apache\groovy\groovy-json\4.0.6\groovy-json-4.0.6.jar;C:\Users\Santosh Sharma\.m2\repository\io\rest-assured\rest-assured-common\5.3.0\rest-assured-common-5.3.0.jar;C:\Users\Santosh Sharma\.m2\repository\org\testng\testng\7.7.0\testng-7.7.0.jar;C:\Users\Santosh Sharma\.m2\repository\org\slf4j\slf4j-api\1.7.36\slf4j-api-1.7.36.jar;C:\Users\Santosh Sharma\.m2\repository\com\beust\jcommander\1.82\jcommander-1.82.jar;C:\Users\Santosh Sharma\.m2\repository\org\webjars\jquery\3.6.1\jquery-3.6.1.jar;C:\Users\Santosh Sharma\.m2\repository\io\rest-assured\json-schema-validator\5.3.0\json-schema-validator-5.3.0.jar;C:\Users\Santosh Sharma\.m2\repository\com\github\java-json-tools\json-schema-validator\2.2.14\json-schema-validator-2.2.14.jar;C:\Users\Santosh Sharma\.m2\repository\com\google\guava\guava\28.2-android\guava-28.2-android.jar;C:\Users\Santosh Sharma\.m2\repository\com\google\guava\failureaccess\1.0.1\failureaccess-1.0.1.jar;C:\Users\Santosh Sharma\.m2\repository\com\google\guava\listenablefuture\9999.0-empty-to-avoid-conflict-with-guava\listenablefuture-9999.0-empty-to-avoid-conflict-with-guava.jar;C:\Users\Santosh Sharma\.m2\repository\org\checkerframework\checker-compat-qual\2.5.5\checker-compat-qual-2.5.5.jar;C:\Users\Santosh Sharma\.m2\repository\com\google\errorprone\error_prone_annotations\2.3.4\error_prone_annotations-2.3.4.jar;C:\Users\Santosh Sharma\.m2\repository\com\google\j2objc\j2objc-annotations\1.3\j2objc-annotations-1.3.jar;C:\Users\Santosh Sharma\.m2\repository\com\github\java-json-tools\jackson-coreutils-equivalence\1.0\jackson-coreutils-equivalence-1.0.jar;C:\Users\Santosh Sharma\.m2\repository\com\github\java-json-tools\jackson-coreutils\2.0\jackson-coreutils-2.0.jar;C:\Users\Santosh Sharma\.m2\repository\com\github\java-json-tools\msg-simple\1.2\msg-simple-1.2.jar;C:\Users\Santosh Sharma\.m2\repository\com\github\java-json-tools\btf\1.3\btf-1.3.jar;C:\Users\Santosh Sharma\.m2\repository\com\github\java-json-tools\json-schema-core\1.2.14\json-schema-core-1.2.14.jar;C:\Users\Santosh Sharma\.m2\repository\com\github\java-json-tools\uri-template\0.10\uri-template-0.10.jar;C:\Users\Santosh Sharma\.m2\repository\org\mozilla\rhino\1.7.7.2\rhino-1.7.7.2.jar;C:\Users\Santosh Sharma\.m2\repository\com\sun\mail\mailapi\1.6.2\mailapi-1.6.2.jar;C:\Users\Santosh Sharma\.m2\repository\joda-time\joda-time\2.10.5\joda-time-2.10.5.jar;C:\Users\Santosh Sharma\.m2\repository\com\googlecode\libphonenumber\libphonenumber\8.11.1\libphonenumber-8.11.1.jar;C:\Users\Santosh Sharma\.m2\repository\com\google\code\findbugs\jsr305\3.0.2\jsr305-3.0.2.jar;C:\Users\Santosh Sharma\.m2\repository\net\sf\jopt-simple\jopt-simple\5.0.4\jopt-simple-5.0.4.jar;C:\Users\Santosh Sharma\.m2\repository\org\json\json\20220924\json-20220924.jar;C:\Users\Santosh Sharma\.m2\repository\com\github\scribejava\scribejava-apis\8.3.1\scribejava-apis-8.3.1.jar;C:\Users\Santosh Sharma\.m2\repository\com\github\scribejava\scribejava-core\8.3.1\scribejava-core-8.3.1.jar;C:\Users\Santosh Sharma\.m2\repository\com\github\scribejava\scribejava-java8\8.3.1\scribejava-java8-8.3.1.jar;C:\Users\Santosh Sharma\.m2\repository\com\fasterxml\jackson\core\jackson-databind\2.14.2\jackson-databind-2.14.2.jar;C:\Users\Santosh Sharma\.m2\repository\com\fasterxml\jackson\core\jackson-annotations\2.14.2\jackson-annotations-2.14.2.jar;C:\Users\Santosh Sharma\.m2\repository\com\fasterxml\jackson\core\jackson-core\2.14.2\jackson-core-2.14.2.jar;C:\Users\Santosh Sharma\.m2\repository\com\google\code\gson\gson\2.9.0\gson-2.9.0.jar;C:\Users\Santosh Sharma\.m2\repository\com\github\javafaker\javafaker\1.0.2\javafaker-1.0.2.jar;C:\Users\Santosh Sharma\.m2\repository\org\apache\commons\commons-lang3\3.5\commons-lang3-3.5.jar;C:\Users\Santosh Sharma\.m2\repository\org\yaml\snakeyaml\1.23\snakeyaml-1.23-android.jar;C:\Users\Santosh Sharma\.m2\repository\com\github\mifmif\generex\1.0.2\generex-1.0.2.jar;C:\Users\Santosh Sharma\.m2\repository\dk\brics\automaton\automaton\1.11-8\automaton-1.11-8.jar;C:\Users\Santosh Sharma\.m2\repository\org\apache\poi\poi\5.2.2\poi-5.2.2.jar;C:\Users\Santosh Sharma\.m2\repository\commons-codec\commons-codec\1.15\commons-codec-1.15.jar;C:\Users\Santosh Sharma\.m2\repository\org\apache\commons\commons-collections4\4.4\commons-collections4-4.4.jar;C:\Users\Santosh Sharma\.m2\repository\org\apache\commons\commons-math3\3.6.1\commons-math3-3.6.1.jar;C:\Users\Santosh Sharma\.m2\repository\commons-io\commons-io\2.11.0\commons-io-2.11.0.jar;C:\Users\Santosh Sharma\.m2\repository\com\zaxxer\SparseBitSet\1.2\SparseBitSet-1.2.jar;C:\Users\Santosh Sharma\.m2\repository\org\apache\logging\log4j\log4j-api\2.17.2\log4j-api-2.17.2.jar;C:\Users\Santosh Sharma\.m2\repository\org\apache\poi\poi-ooxml\5.2.2\poi-ooxml-5.2.2.jar;C:\Users\Santosh Sharma\.m2\repository\org\apache\poi\poi-ooxml-lite\5.2.2\poi-ooxml-lite-5.2.2.jar;C:\Users\Santosh Sharma\.m2\repository\org\apache\xmlbeans\xmlbeans\5.0.3\xmlbeans-5.0.3.jar;C:\Users\Santosh Sharma\.m2\repository\org\apache\commons\commons-compress\1.21\commons-compress-1.21.jar;C:\Users\Santosh Sharma\.m2\repository\com\github\virtuald\curvesapi\1.07\curvesapi-1.07.jar;C:\Users\Santosh Sharma\.m2\repository\com\aventstack\extentreports\5.0.9\extentreports-5.0.9.jar;C:\Users\Santosh Sharma\.m2\repository\io\reactivex\rxjava3\rxjava\3.0.4\rxjava-3.0.4.jar;C:\Users\Santosh Sharma\.m2\repository\org\reactivestreams\reactive-streams\1.0.3\reactive-streams-1.0.3.jar;C:\Users\Santosh Sharma\.m2\repository\org\freemarker\freemarker\2.3.30\freemarker-2.3.30.jar;C:\Users\Santosh Sharma\.m2\repository\org\projectlombok\lombok\1.18.26\lombok-1.18.26.jar;"/>
     <property name="sun.cpu.endian" value="little"/>
@@ -30,7 +30,7 @@
     <property name="line.separator" value="&#10;"/>
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
-    <property name="surefire.real.class.path" value="C:\Users\Santosh Sharma\AppData\Local\Temp\surefire3283298597112498008\surefirebooter10430337475722926836.jar"/>
+    <property name="surefire.real.class.path" value="C:\Users\Santosh Sharma\AppData\Local\Temp\surefire1458329652403063412\surefirebooter4720999625769578565.jar"/>
     <property name="user.script" value=""/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
     <property name="java.runtime.version" value="17.0.3.1+2-LTS-6"/>
@@ -56,7 +56,7 @@
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
     <property name="java.class.version" value="61.0"/>
   </properties>
-  <testcase name="createNewUser" classname="com.notesapi.tests.UsersTests" time="4.811">
+  <testcase name="createNewUser" classname="com.notesapi.tests.UsersTests" time="4.989">
     <system-out><![CDATA[Request method:	POST
 Request URI:	https://practice.expandtesting.com/notes/api/users/register
 Proxy:			<none>
@@ -70,9 +70,9 @@ Cookies:		<none>
 Multiparts:		<none>
 Body:
 {
-    "name": "Brent Halvorson",
-    "email": "granville.skiles@yahoo.com",
-    "password": "8293fl"
+    "name": "Hong Champlin Sr.",
+    "email": "rosario.jerde@yahoo.com",
+    "password": "jpwdz4mowh2"
 }
 HTTP/1.1 201 Created
 access-control-allow-origin: *
@@ -81,10 +81,10 @@ access-control-allow-methods: GET, POST, PUT, DELETE, PATCH
 access-control-allow-headers: Origin, X-Requested-With, Authorization, Content-Type, Accept, X-Auth-Token
 content-type: application/json; charset=utf-8
 content-encoding: gzip
-etag: W/"b2-8W0GGKqQXwbJggt8b5ACZMNCHPA"
+etag: W/"b1-TXqb4HlKNlg7ZLeMbFC4M+3zaZE"
 set-cookie: express:sess=eyJmbGFzaCI6e319; path=/; httponly
 set-cookie: express:sess.sig=VlmTeWF7MxWVNoHpFZhhQrnM1HU; path=/; httponly
-date: Fri, 26 May 2023 13:24:30 GMT
+date: Fri, 26 May 2023 20:03:38 GMT
 connection: keep-alive
 keep-alive: timeout=5
 transfer-encoding: chunked
@@ -94,9 +94,19 @@ transfer-encoding: chunked
     "status": 201,
     "message": "User account created successfully",
     "data": {
-        "id": "6470b30d2ef9080211f9ae18",
-        "name": "Brent Halvorson",
-        "email": "granville.skiles@yahoo.com"
+        "id": "6471109a2ef9080211f9b376",
+        "name": "Hong Champlin Sr.",
+        "email": "rosario.jerde@yahoo.com"
+    }
+}
+{
+    "success": true,
+    "status": 201,
+    "message": "User account created successfully",
+    "data": {
+        "id": "6471109a2ef9080211f9b376",
+        "name": "Hong Champlin Sr.",
+        "email": "rosario.jerde@yahoo.com"
     }
 }
 ]]></system-out>
@@ -105,7 +115,48 @@ SLF4J: Defaulting to no-operation (NOP) logger implementation
 SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.
 ]]></system-err>
   </testcase>
-  <testcase name="performLogin[org.testng.TestRunner@1be3f8f8](1)" classname="com.notesapi.tests.UsersTests" time="1.875">
+  <testcase name="performLogin[org.testng.TestRunner@441aa7ae](1)" classname="com.notesapi.tests.UsersTests" time="0.755">
+    <failure message="expected [201] but found [200]" type="java.lang.AssertionError"><![CDATA[java.lang.AssertionError: expected [201] but found [200]
+	at org.testng.Assert.fail(Assert.java:110)
+	at org.testng.Assert.failNotEquals(Assert.java:1413)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:149)
+	at org.testng.Assert.assertEquals(Assert.java:131)
+	at org.testng.Assert.assertEquals(Assert.java:1240)
+	at org.testng.Assert.assertEquals(Assert.java:1274)
+	at com.notesapi.tests.UsersTests.performLogin(UsersTests.java:44)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:969)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:829)
+	at org.testng.TestRunner.run(TestRunner.java:602)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:437)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:431)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:391)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:330)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
+	at org.testng.TestNG.runSuites(TestNG.java:1099)
+	at org.testng.TestNG.run(TestNG.java:1067)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:324)
+	at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:74)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:123)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:456)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:169)
+	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:595)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:581)
+]]></failure>
     <system-out><![CDATA[Request method:	POST
 Request URI:	https://practice.expandtesting.com/notes/api/users/login
 Proxy:			<none>
@@ -119,8 +170,8 @@ Cookies:		<none>
 Multiparts:		<none>
 Body:
 {
-    "email": "granville.skiles@yahoo.com",
-    "password": "8293fl"
+    "email": "rosario.jerde@yahoo.com",
+    "password": "jpwdz4mowh2"
 }
 HTTP/1.1 200 OK
 access-control-allow-origin: *
@@ -129,10 +180,10 @@ access-control-allow-methods: GET, POST, PUT, DELETE, PATCH
 access-control-allow-headers: Origin, X-Requested-With, Authorization, Content-Type, Accept, X-Auth-Token
 content-type: application/json; charset=utf-8
 content-encoding: gzip
-etag: W/"ec-TZoK8B7gBW/zaz1yYpQcih3pxVw"
+etag: W/"eb-SlpvrZ1Vbin/AaiGSPQ9fFLYqOA"
 set-cookie: express:sess=eyJmbGFzaCI6e319; path=/; httponly
 set-cookie: express:sess.sig=VlmTeWF7MxWVNoHpFZhhQrnM1HU; path=/; httponly
-date: Fri, 26 May 2023 13:24:31 GMT
+date: Fri, 26 May 2023 20:03:40 GMT
 connection: keep-alive
 keep-alive: timeout=5
 transfer-encoding: chunked
@@ -142,15 +193,26 @@ transfer-encoding: chunked
     "status": 200,
     "message": "Login successful",
     "data": {
-        "id": "6470b30d2ef9080211f9ae18",
-        "name": "Brent Halvorson",
-        "email": "granville.skiles@yahoo.com",
-        "token": "ec8d4e67e69848f081025dc2cbbbac3c505d35c61bd44e0598a568963b033e15"
+        "id": "6471109a2ef9080211f9b376",
+        "name": "Hong Champlin Sr.",
+        "email": "rosario.jerde@yahoo.com",
+        "token": "359c4d978d404d0d855cc97f02a54b36f23beb08d5b546ddbdfbefa0eb1f8f4e"
+    }
+}
+{
+    "success": true,
+    "status": 200,
+    "message": "Login successful",
+    "data": {
+        "id": "6471109a2ef9080211f9b376",
+        "name": "Hong Champlin Sr.",
+        "email": "rosario.jerde@yahoo.com",
+        "token": "359c4d978d404d0d855cc97f02a54b36f23beb08d5b546ddbdfbefa0eb1f8f4e"
     }
 }
 ]]></system-out>
   </testcase>
-  <testcase name="retrieveUserInfo" classname="com.notesapi.tests.UsersTests" time="0.595">
+  <testcase name="retrieveUserInfo" classname="com.notesapi.tests.UsersTests" time="1.552">
     <system-out><![CDATA[Request method:	GET
 Request URI:	https://practice.expandtesting.com/notes/api/users/profile
 Proxy:			<none>
@@ -158,8 +220,8 @@ Request params:	<none>
 Query params:	<none>
 Form params:	<none>
 Path params:	<none>
-Headers:		Accept=application/json, application/javascript, text/javascript, text/json
-				x-auth-token=ec8d4e67e69848f081025dc2cbbbac3c505d35c61bd44e0598a568963b033e15
+Headers:		x-auth-token=359c4d978d404d0d855cc97f02a54b36f23beb08d5b546ddbdfbefa0eb1f8f4e
+				Accept=*/*
 				Content-Type=application/json
 Cookies:		<none>
 Multiparts:		<none>
@@ -169,14 +231,24 @@ Body:			<none>
     "status": 200,
     "message": "Profile successful",
     "data": {
-        "id": "6470b30d2ef9080211f9ae18",
-        "name": "Brent Halvorson",
-        "email": "granville.skiles@yahoo.com"
+        "id": "6471109a2ef9080211f9b376",
+        "name": "Hong Champlin Sr.",
+        "email": "rosario.jerde@yahoo.com"
+    }
+}
+{
+    "success": true,
+    "status": 200,
+    "message": "Profile successful",
+    "data": {
+        "id": "6471109a2ef9080211f9b376",
+        "name": "Hong Champlin Sr.",
+        "email": "rosario.jerde@yahoo.com"
     }
 }
 ]]></system-out>
   </testcase>
-  <testcase name="editUserInfo" classname="com.notesapi.tests.UsersTests" time="0.646">
+  <testcase name="editUserInfo" classname="com.notesapi.tests.UsersTests" time="0.675">
     <system-out><![CDATA[Request method:	PATCH
 Request URI:	https://practice.expandtesting.com/notes/api/users/profile
 Proxy:			<none>
@@ -185,13 +257,13 @@ Query params:	<none>
 Form params:	<none>
 Path params:	<none>
 Headers:		Accept=application/json, application/javascript, text/javascript, text/json
-				x-auth-token=ec8d4e67e69848f081025dc2cbbbac3c505d35c61bd44e0598a568963b033e15
+				x-auth-token=359c4d978d404d0d855cc97f02a54b36f23beb08d5b546ddbdfbefa0eb1f8f4e
 				Content-Type=application/json
 Cookies:		<none>
 Multiparts:		<none>
 Body:
 {
-    "name": "Brent Halvorson",
+    "name": "Hong Champlin Sr.",
     "phone": "0123456789",
     "company": "home pvt"
 }
@@ -200,16 +272,28 @@ Body:
     "status": 200,
     "message": "Profile updated successful",
     "data": {
-        "id": "6470b30d2ef9080211f9ae18",
-        "name": "Brent Halvorson",
-        "email": "granville.skiles@yahoo.com",
+        "id": "6471109a2ef9080211f9b376",
+        "name": "Hong Champlin Sr.",
+        "email": "rosario.jerde@yahoo.com",
+        "phone": "0123456789",
+        "company": "home pvt"
+    }
+}
+{
+    "success": true,
+    "status": 200,
+    "message": "Profile updated successful",
+    "data": {
+        "id": "6471109a2ef9080211f9b376",
+        "name": "Hong Champlin Sr.",
+        "email": "rosario.jerde@yahoo.com",
         "phone": "0123456789",
         "company": "home pvt"
     }
 }
 ]]></system-out>
   </testcase>
-  <testcase name="editUserPassword" classname="com.notesapi.tests.UsersTests" time="0.88">
+  <testcase name="editUserPassword" classname="com.notesapi.tests.UsersTests" time="1.014">
     <system-out><![CDATA[Request method:	POST
 Request URI:	https://practice.expandtesting.com/notes/api/users/change-password
 Proxy:			<none>
@@ -218,14 +302,14 @@ Query params:	<none>
 Form params:	<none>
 Path params:	<none>
 Headers:		Accept=application/json, application/javascript, text/javascript, text/json
-				x-auth-token=ec8d4e67e69848f081025dc2cbbbac3c505d35c61bd44e0598a568963b033e15
+				x-auth-token=359c4d978d404d0d855cc97f02a54b36f23beb08d5b546ddbdfbefa0eb1f8f4e
 				Content-Type=application/json
 Cookies:		<none>
 Multiparts:		<none>
 Body:
 {
-    "currentPassword": "8293fl",
-    "newPassword": "od1rycz2"
+    "currentPassword": "jpwdz4mowh2",
+    "newPassword": "qhgz7tb9ny1d"
 }
 HTTP/1.1 200 OK
 access-control-allow-origin: *
@@ -237,7 +321,7 @@ content-encoding: gzip
 etag: W/"4f-ava50LOZV9GrNX1jv2XMGsJdMdg"
 set-cookie: express:sess=eyJmbGFzaCI6e319; path=/; httponly
 set-cookie: express:sess.sig=VlmTeWF7MxWVNoHpFZhhQrnM1HU; path=/; httponly
-date: Fri, 26 May 2023 13:24:34 GMT
+date: Fri, 26 May 2023 20:03:43 GMT
 connection: keep-alive
 keep-alive: timeout=5
 transfer-encoding: chunked
@@ -247,9 +331,14 @@ transfer-encoding: chunked
     "status": 200,
     "message": "The password was successfully updated"
 }
+{
+    "success": true,
+    "status": 200,
+    "message": "The password was successfully updated"
+}
 ]]></system-out>
   </testcase>
-  <testcase name="createNewNote" classname="com.notesapi.tests.NotesTests" time="0.612">
+  <testcase name="createNewNote" classname="com.notesapi.tests.NotesTests" time="0.613">
     <system-out><![CDATA[Request method:	POST
 Request URI:	https://practice.expandtesting.com/notes/api/notes
 Proxy:			<none>
@@ -258,14 +347,14 @@ Query params:	<none>
 Form params:	<none>
 Path params:	<none>
 Headers:		Accept=application/json, application/javascript, text/javascript, text/json
-				x-auth-token=ec8d4e67e69848f081025dc2cbbbac3c505d35c61bd44e0598a568963b033e15
+				x-auth-token=359c4d978d404d0d855cc97f02a54b36f23beb08d5b546ddbdfbefa0eb1f8f4e
 				Content-Type=application/json
 Cookies:		<none>
 Multiparts:		<none>
 Body:
 {
-    "title": "Little Hands Clapping",
-    "description": "Fable",
+    "title": "The Soldier's Art",
+    "description": "Historical fiction",
     "category": "Home",
     "completed": false
 }
@@ -276,10 +365,10 @@ access-control-allow-methods: GET, POST, PUT, DELETE, PATCH
 access-control-allow-headers: Origin, X-Requested-With, Authorization, Content-Type, Accept, X-Auth-Token
 content-type: application/json; charset=utf-8
 content-encoding: gzip
-etag: W/"13b-cv57WGgt10MuprwmL7Tx2V+YKb0"
+etag: W/"144-00MRwQbbGVqCDYCB+76zuZVQbt0"
 set-cookie: express:sess=eyJmbGFzaCI6e319; path=/; httponly
 set-cookie: express:sess.sig=VlmTeWF7MxWVNoHpFZhhQrnM1HU; path=/; httponly
-date: Fri, 26 May 2023 13:24:34 GMT
+date: Fri, 26 May 2023 20:03:43 GMT
 connection: keep-alive
 keep-alive: timeout=5
 transfer-encoding: chunked
@@ -289,20 +378,35 @@ transfer-encoding: chunked
     "status": 200,
     "message": "Note successfully created",
     "data": {
-        "id": "6470b3122ef9080211f9ae27",
-        "title": "Little Hands Clapping",
-        "description": "Fable",
+        "id": "6471109f2ef9080211f9b385",
+        "title": "The Soldier's Art",
+        "description": "Historical fiction",
         "category": "Home",
         "completed": false,
-        "created_at": "2023-05-26T13:24:34.670Z",
-        "updated_at": "2023-05-26T13:24:34.670Z",
-        "user_id": "6470b30d2ef9080211f9ae18"
+        "created_at": "2023-05-26T20:03:43.830Z",
+        "updated_at": "2023-05-26T20:03:43.830Z",
+        "user_id": "6471109a2ef9080211f9b376"
     }
 }
-GENERATED ID - 6470b3122ef9080211f9ae27
+{
+    "success": true,
+    "status": 200,
+    "message": "Note successfully created",
+    "data": {
+        "id": "6471109f2ef9080211f9b385",
+        "title": "The Soldier's Art",
+        "description": "Historical fiction",
+        "category": "Home",
+        "completed": false,
+        "created_at": "2023-05-26T20:03:43.830Z",
+        "updated_at": "2023-05-26T20:03:43.830Z",
+        "user_id": "6471109a2ef9080211f9b376"
+    }
+}
+GENERATED ID - 6471109f2ef9080211f9b385
 ]]></system-out>
   </testcase>
-  <testcase name="retrieveNote" classname="com.notesapi.tests.NotesTests" time="0.554">
+  <testcase name="retrieveNote" classname="com.notesapi.tests.NotesTests" time="0.57">
     <system-out><![CDATA[Request method:	GET
 Request URI:	https://practice.expandtesting.com/notes/api/notes
 Proxy:			<none>
@@ -310,8 +414,8 @@ Request params:	<none>
 Query params:	<none>
 Form params:	<none>
 Path params:	<none>
-Headers:		Accept=application/json, application/javascript, text/javascript, text/json
-				x-auth-token=ec8d4e67e69848f081025dc2cbbbac3c505d35c61bd44e0598a568963b033e15
+Headers:		x-auth-token=359c4d978d404d0d855cc97f02a54b36f23beb08d5b546ddbdfbefa0eb1f8f4e
+				Accept=*/*
 				Content-Type=application/json
 Cookies:		<none>
 Multiparts:		<none>
@@ -322,29 +426,46 @@ Body:			<none>
     "message": "Notes successfully retrieved",
     "data": [
         {
-            "id": "6470b3122ef9080211f9ae27",
-            "title": "Little Hands Clapping",
-            "description": "Fable",
+            "id": "6471109f2ef9080211f9b385",
+            "title": "The Soldier's Art",
+            "description": "Historical fiction",
             "category": "Home",
             "completed": false,
-            "created_at": "2023-05-26T13:24:34.670Z",
-            "updated_at": "2023-05-26T13:24:34.670Z",
-            "user_id": "6470b30d2ef9080211f9ae18"
+            "created_at": "2023-05-26T20:03:43.830Z",
+            "updated_at": "2023-05-26T20:03:43.830Z",
+            "user_id": "6471109a2ef9080211f9b376"
+        }
+    ]
+}
+{
+    "success": true,
+    "status": 200,
+    "message": "Notes successfully retrieved",
+    "data": [
+        {
+            "id": "6471109f2ef9080211f9b385",
+            "title": "The Soldier's Art",
+            "description": "Historical fiction",
+            "category": "Home",
+            "completed": false,
+            "created_at": "2023-05-26T20:03:43.830Z",
+            "updated_at": "2023-05-26T20:03:43.830Z",
+            "user_id": "6471109a2ef9080211f9b376"
         }
     ]
 }
 ]]></system-out>
   </testcase>
-  <testcase name="retrieveNoteById" classname="com.notesapi.tests.NotesTests" time="0.58">
+  <testcase name="retrieveNoteById" classname="com.notesapi.tests.NotesTests" time="0.59">
     <system-out><![CDATA[Request method:	GET
-Request URI:	https://practice.expandtesting.com/notes/api/notes/6470b3122ef9080211f9ae27
+Request URI:	https://practice.expandtesting.com/notes/api/notes/6471109f2ef9080211f9b385
 Proxy:			<none>
 Request params:	<none>
 Query params:	<none>
 Form params:	<none>
-Path params:	id=6470b3122ef9080211f9ae27
-Headers:		Accept=application/json, application/javascript, text/javascript, text/json
-				x-auth-token=ec8d4e67e69848f081025dc2cbbbac3c505d35c61bd44e0598a568963b033e15
+Path params:	id=6471109f2ef9080211f9b385
+Headers:		x-auth-token=359c4d978d404d0d855cc97f02a54b36f23beb08d5b546ddbdfbefa0eb1f8f4e
+				Accept=*/*
 				Content-Type=application/json
 Cookies:		<none>
 Multiparts:		<none>
@@ -354,35 +475,50 @@ Body:			<none>
     "status": 200,
     "message": "Note successfully retrieved",
     "data": {
-        "id": "6470b3122ef9080211f9ae27",
-        "title": "Little Hands Clapping",
-        "description": "Fable",
+        "id": "6471109f2ef9080211f9b385",
+        "title": "The Soldier's Art",
+        "description": "Historical fiction",
         "category": "Home",
         "completed": false,
-        "created_at": "2023-05-26T13:24:34.670Z",
-        "updated_at": "2023-05-26T13:24:34.670Z",
-        "user_id": "6470b30d2ef9080211f9ae18"
+        "created_at": "2023-05-26T20:03:43.830Z",
+        "updated_at": "2023-05-26T20:03:43.830Z",
+        "user_id": "6471109a2ef9080211f9b376"
+    }
+}
+{
+    "success": true,
+    "status": 200,
+    "message": "Note successfully retrieved",
+    "data": {
+        "id": "6471109f2ef9080211f9b385",
+        "title": "The Soldier's Art",
+        "description": "Historical fiction",
+        "category": "Home",
+        "completed": false,
+        "created_at": "2023-05-26T20:03:43.830Z",
+        "updated_at": "2023-05-26T20:03:43.830Z",
+        "user_id": "6471109a2ef9080211f9b376"
     }
 }
 ]]></system-out>
   </testcase>
-  <testcase name="updateExistingNote" classname="com.notesapi.tests.NotesTests" time="0.647">
+  <testcase name="updateExistingNote" classname="com.notesapi.tests.NotesTests" time="0.656">
     <system-out><![CDATA[Request method:	PUT
-Request URI:	https://practice.expandtesting.com/notes/api/notes/6470b3122ef9080211f9ae27
+Request URI:	https://practice.expandtesting.com/notes/api/notes/6471109f2ef9080211f9b385
 Proxy:			<none>
 Request params:	<none>
 Query params:	<none>
 Form params:	<none>
-Path params:	id=6470b3122ef9080211f9ae27
+Path params:	id=6471109f2ef9080211f9b385
 Headers:		Accept=application/json, application/javascript, text/javascript, text/json
-				x-auth-token=ec8d4e67e69848f081025dc2cbbbac3c505d35c61bd44e0598a568963b033e15
+				x-auth-token=359c4d978d404d0d855cc97f02a54b36f23beb08d5b546ddbdfbefa0eb1f8f4e
 				Content-Type=application/json
 Cookies:		<none>
 Multiparts:		<none>
 Body:
 {
-    "title": "Little Hands Clapping",
-    "description": "Fable",
+    "title": "The Soldier's Art",
+    "description": "Historical fiction",
     "category": "Home",
     "completed": false
 }
@@ -391,28 +527,43 @@ Body:
     "status": 200,
     "message": "Note successfully Updated",
     "data": {
-        "id": "6470b3122ef9080211f9ae27",
-        "title": "Little Hands Clapping",
-        "description": "Fable",
+        "id": "6471109f2ef9080211f9b385",
+        "title": "The Soldier's Art",
+        "description": "Historical fiction",
         "category": "Home",
         "completed": false,
-        "created_at": "2023-05-26T13:24:34.670Z",
-        "updated_at": "2023-05-26T13:24:34.670Z",
-        "user_id": "6470b30d2ef9080211f9ae18"
+        "created_at": "2023-05-26T20:03:43.830Z",
+        "updated_at": "2023-05-26T20:03:43.830Z",
+        "user_id": "6471109a2ef9080211f9b376"
+    }
+}
+{
+    "success": true,
+    "status": 200,
+    "message": "Note successfully Updated",
+    "data": {
+        "id": "6471109f2ef9080211f9b385",
+        "title": "The Soldier's Art",
+        "description": "Historical fiction",
+        "category": "Home",
+        "completed": false,
+        "created_at": "2023-05-26T20:03:43.830Z",
+        "updated_at": "2023-05-26T20:03:43.830Z",
+        "user_id": "6471109a2ef9080211f9b376"
     }
 }
 ]]></system-out>
   </testcase>
-  <testcase name="updateCompleteStatusOfNote" classname="com.notesapi.tests.NotesTests" time="0.634">
+  <testcase name="updateCompleteStatusOfNote" classname="com.notesapi.tests.NotesTests" time="0.63">
     <system-out><![CDATA[Request method:	PATCH
-Request URI:	https://practice.expandtesting.com/notes/api/notes/6470b3122ef9080211f9ae27
+Request URI:	https://practice.expandtesting.com/notes/api/notes/6471109f2ef9080211f9b385
 Proxy:			<none>
 Request params:	<none>
 Query params:	<none>
 Form params:	<none>
-Path params:	id=6470b3122ef9080211f9ae27
+Path params:	id=6471109f2ef9080211f9b385
 Headers:		Accept=application/json, application/javascript, text/javascript, text/json
-				x-auth-token=ec8d4e67e69848f081025dc2cbbbac3c505d35c61bd44e0598a568963b033e15
+				x-auth-token=359c4d978d404d0d855cc97f02a54b36f23beb08d5b546ddbdfbefa0eb1f8f4e
 				Content-Type=application/json
 Cookies:		<none>
 Multiparts:		<none>
@@ -425,32 +576,52 @@ Body:
     "status": 200,
     "message": "Note successfully Updated",
     "data": {
-        "id": "6470b3122ef9080211f9ae27",
-        "title": "Little Hands Clapping",
-        "description": "Fable",
+        "id": "6471109f2ef9080211f9b385",
+        "title": "The Soldier's Art",
+        "description": "Historical fiction",
         "category": "Home",
         "completed": true,
-        "created_at": "2023-05-26T13:24:34.670Z",
-        "updated_at": "2023-05-26T13:24:37.096Z",
-        "user_id": "6470b30d2ef9080211f9ae18"
+        "created_at": "2023-05-26T20:03:43.830Z",
+        "updated_at": "2023-05-26T20:03:46.292Z",
+        "user_id": "6471109a2ef9080211f9b376"
+    }
+}
+{
+    "success": true,
+    "status": 200,
+    "message": "Note successfully Updated",
+    "data": {
+        "id": "6471109f2ef9080211f9b385",
+        "title": "The Soldier's Art",
+        "description": "Historical fiction",
+        "category": "Home",
+        "completed": true,
+        "created_at": "2023-05-26T20:03:43.830Z",
+        "updated_at": "2023-05-26T20:03:46.292Z",
+        "user_id": "6471109a2ef9080211f9b376"
     }
 }
 ]]></system-out>
   </testcase>
-  <testcase name="deleteNoteById" classname="com.notesapi.tests.NotesTests" time="0.607">
+  <testcase name="deleteNoteById" classname="com.notesapi.tests.NotesTests" time="0.591">
     <system-out><![CDATA[Request method:	DELETE
-Request URI:	https://practice.expandtesting.com/notes/api/notes/6470b3122ef9080211f9ae27
+Request URI:	https://practice.expandtesting.com/notes/api/notes/6471109f2ef9080211f9b385
 Proxy:			<none>
 Request params:	<none>
 Query params:	<none>
 Form params:	<none>
-Path params:	id=6470b3122ef9080211f9ae27
-Headers:		Accept=application/json, application/javascript, text/javascript, text/json
-				x-auth-token=ec8d4e67e69848f081025dc2cbbbac3c505d35c61bd44e0598a568963b033e15
+Path params:	id=6471109f2ef9080211f9b385
+Headers:		x-auth-token=359c4d978d404d0d855cc97f02a54b36f23beb08d5b546ddbdfbefa0eb1f8f4e
+				Accept=*/*
 				Content-Type=application/json
 Cookies:		<none>
 Multiparts:		<none>
 Body:			<none>
+{
+    "success": true,
+    "status": 200,
+    "message": "Note successfully deleted"
+}
 {
     "success": true,
     "status": 200,

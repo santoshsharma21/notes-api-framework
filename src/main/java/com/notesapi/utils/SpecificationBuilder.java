@@ -34,9 +34,9 @@ public class SpecificationBuilder {
 	public static RequestSpecification getRequestSpecification() {
 		RequestSpecBuilder spec = new RequestSpecBuilder();
 		spec
+		 	.setBaseUri(EndPoints.BASE_URL)
+		 	.setContentType(ContentType.JSON)
 			.setBaseUri(EndPoints.BASE_URL)
-			.setContentType(ContentType.JSON)
-			.setAccept(ContentType.JSON)
 			.log(LogDetail.ALL);
 		
 		RequestSpecification requestSpec = spec.build();
