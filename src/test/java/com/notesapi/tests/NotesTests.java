@@ -48,7 +48,6 @@ public class NotesTests {
 	
 	@Test(priority = 1)
 	void retrieveNote() { 
-		
 		Response response = NotesHelper.getNote(xAuthToken);
 		
 		Assert.assertEquals(response.getStatusCode(), 200);
@@ -57,7 +56,6 @@ public class NotesTests {
 	
 	@Test(priority = 2)
 	void retrieveNoteById() {
-		
 		Response response = NotesHelper.getNoteById(xAuthToken, id);
 		
 		Assert.assertEquals(response.getStatusCode(), 200);
@@ -89,7 +87,6 @@ public class NotesTests {
 	
 	@Test(priority = 5)
 	void deleteNoteById() {
-		
 		Response response = NotesHelper.deleteNote(xAuthToken, id);  
 		
 		Assert.assertEquals(response.getStatusCode(), 200);
