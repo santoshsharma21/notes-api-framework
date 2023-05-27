@@ -1,7 +1,7 @@
 /**
  * 
  */
-package com.notesapi.utils;
+package com.notesapi.restutils;
 
 import com.notesapi.constants.EndPoints;
 

@@ -1,8 +1,8 @@
 -------------------------------------------------------------------------------
 Test set: TestSuite
 -------------------------------------------------------------------------------
-Tests run: 11, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 14.596 s <<< FAILURE! - in TestSuite
-com.notesapi.tests.UsersTests.performLogin[org.testng.TestRunner@441aa7ae](1)  Time elapsed: 0.755 s  <<< FAILURE!
+Tests run: 11, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 20.016 s <<< FAILURE! - in TestSuite
+com.notesapi.tests.UsersTests.performLogin[org.testng.TestRunner@718ad3a6](1)  Time elapsed: 2.226 s  <<< FAILURE!
 java.lang.AssertionError: expected [201] but found [200]
 	at org.testng.Assert.fail(Assert.java:110)
 	at org.testng.Assert.failNotEquals(Assert.java:1413)

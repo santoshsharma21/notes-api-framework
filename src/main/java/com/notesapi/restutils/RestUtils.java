@@ -1,7 +1,7 @@
 /**
  * 
  */
-package com.notesapi.utils;
+package com.notesapi.restutils;
 
 import com.notesapi.extentreport.ReportLogger;
 
@@ -25,7 +25,7 @@ public class RestUtils {
 		Response response = RestAssured.given().spec(reqSpec).when().post(endpoint).then().spec(resSpec).log().all()
 				.extract().response();
 
-		printRequestDetails(reqSpec, endpoint, "POST", new Object());
+		printRequestDetails(reqSpec, endpoint, "POST");
 		printResponseDetails(response);
 		return response;
 	}
@@ -37,7 +37,7 @@ public class RestUtils {
 
 				.when().post(endpoint).then().spec(resSpec).log().all().extract().response();
 
-		printRequestDetails(reqSpec, endpoint, "POST", new Object());
+		printRequestDetails(reqSpec, endpoint, "POST");
 		printResponseDetails(response);
 		return response;
 	}
@@ -52,7 +52,7 @@ public class RestUtils {
 
 				.then().spec(resSpec).log().body().extract().response();
 
-		printRequestDetails(reqSpec, endpoint, "GET");
+		printRequestDetails(endpoint, reqSpec, "GET");
 		printResponseDetails(response);
 		return response;
 	}
@@ -66,7 +66,7 @@ public class RestUtils {
 
 				.then().spec(resSpec).log().body().extract().response();
 		
-		printRequestDetails(reqSpec, endpoint, "GET");
+		printRequestDetails(endpoint, reqSpec, "GET");
 		printResponseDetails(response);
 		return response;
 	}
@@ -81,7 +81,7 @@ public class RestUtils {
 
 				.then().spec(resSpec).log().body().extract().response();
 		
-		printRequestDetails(reqSpec, endpoint, "PUT", new Object());
+		printRequestDetails(reqSpec, endpoint, "PUT");
 		printResponseDetails(response);
 		return response;
 	}
@@ -95,7 +95,7 @@ public class RestUtils {
 
 				.then().spec(resSpec).log().body().extract().response();
 		
-		printRequestDetails(reqSpec, endpoint, "PUT", new Object());
+		printRequestDetails(reqSpec, endpoint, "PUT");
 		printResponseDetails(response);
 		return response;
 	}
@@ -110,7 +110,7 @@ public class RestUtils {
 
 				.then().spec(resSpec).log().body().extract().response();
 		
-		printRequestDetails(reqSpec, endpoint, "PATCH", new Object());
+		printRequestDetails(reqSpec, endpoint, "PATCH");
 		printResponseDetails(response);
 		return response;
 	}
@@ -124,7 +124,7 @@ public class RestUtils {
 
 				.then().spec(resSpec).log().body().extract().response();
 		
-		printRequestDetails(reqSpec, endpoint, "PATCH", new Object());
+		printRequestDetails(reqSpec, endpoint, "PATCH");
 		printResponseDetails(response);
 		return response;
 	}
@@ -139,7 +139,7 @@ public class RestUtils {
 
 				.then().spec(resSpec).log().body().extract().response();
 		
-		printRequestDetails(reqSpec, endpoint, "DELETE");
+		printRequestDetails(endpoint, reqSpec, "GET");
 		printResponseDetails(response);
 		return response;
 	}
@@ -153,12 +153,12 @@ public class RestUtils {
 
 				.then().spec(resSpec).log().body().extract().response();
 		
-		printRequestDetails(reqSpec, endpoint, "DELETE");
+		printRequestDetails(endpoint, reqSpec, "GET");
 		printResponseDetails(response);
 		return response;
 	}
     
-	public static void printRequestDetails(RequestSpecification requestSpec, String endpoint, String method, Object empty) {
+	public static void printRequestDetails(RequestSpecification requestSpec, String endpoint, String method) {
 		QueryableRequestSpecification reqQuery = SpecificationQuerier.query(requestSpec);
 		ReportLogger.logInfoDetails("Endpoint - " + endpoint);
 		ReportLogger.logInfoDetails("Request Method - " + method);
@@ -168,7 +168,7 @@ public class RestUtils {
 		ReportLogger.logJsonDetails(reqQuery.getBody().toString());
 	}
 	
-	public static void printRequestDetails(RequestSpecification requestSpec, String endpoint, String method) {
+	public static void printRequestDetails(String endpoint, RequestSpecification requestSpec, String method) {
 		QueryableRequestSpecification reqQuery = SpecificationQuerier.query(requestSpec);
 		ReportLogger.logInfoDetails("Endpoint - " + endpoint);
 		ReportLogger.logInfoDetails("Request Method - " + method);

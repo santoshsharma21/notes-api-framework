@@ -4,7 +4,7 @@
 package com.notesapi.helper;
 
 import com.notesapi.constants.EndPoints;
-import com.notesapi.utils.RestUtils;
+import com.notesapi.restutils.RestUtils;
 
 import io.restassured.response.Response;
 
