@@ -8,6 +8,7 @@
     <classes>
       <class name="com.notesapi.tests.UsersTests">
         <methods>
+          <include name="editUserInfo"/>
           <include name="performLogin" invocation-numbers="0"/>
         </methods>
       </class> <!-- com.notesapi.tests.UsersTests -->

@@ -1,9 +1,12 @@
 com\notesapi\helper\NotesHelper.class
+com\notesapi\restutils\RestUtils.class
+com\notesapi\utils\FakerUtils$1.class
 com\notesapi\extentreport\ReportManager.class
-com\notesapi\utils\SpecificationBuilder.class
 com\notesapi\constants\EndPoints.class
+com\notesapi\restutils\SpecificationBuilder.class
 com\notesapi\extentreport\ReportLogger.class
-com\notesapi\utils\RestUtils.class
+com\notesapi\utils\RandomDataConstants.class
+com\notesapi\utils\FakerUtils.class
 com\notesapi\extentreport\ListenerClass.class
 com\notesapi\utils\TestUtils.class
 com\notesapi\helper\UsersHelper.class

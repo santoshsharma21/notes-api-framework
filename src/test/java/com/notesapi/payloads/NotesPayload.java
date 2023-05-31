@@ -3,8 +3,9 @@
  */
 package com.notesapi.payloads;
 
-import com.github.javafaker.Faker;
 import com.notesapi.pojos.Notes;
+import com.notesapi.utils.FakerUtils;
+import com.notesapi.utils.RandomDataConstants;
 
 /**
  * @author Santosh Sharma
@@ -12,31 +13,33 @@ import com.notesapi.pojos.Notes;
  */
 public class NotesPayload {
 
-	static Faker faker;
-	static String title;
-	static String description;
-	static String category;
-	static boolean completed;
+	static String title = FakerUtils.getRandomData(RandomDataConstants.TITLE);
+	static String description = FakerUtils.getRandomData(RandomDataConstants.TITLE);
+	static String category = FakerUtils.getCategory();
+	static boolean completed = FakerUtils.getComplete();
 
-	// payload to create new note
 	public static Notes createNotePayload() {
-		faker = new Faker();
-		title = faker.book().title();
-		description = faker.book().genre();
-		category = "Home";
-		return Notes.builder().title(title).description(description).category(category).build();
+		return Notes.builder()
+				.title(title)
+				.description(description)
+				.category(category)
+				.build();
 	}
 
-	// payload for updating note
 	public static Notes updateNotePayload() {
-		completed = false;
-		return Notes.builder().title(title).description(description).category(category).completed(completed).build();
+		return Notes.builder()
+				.title(title)
+				.description(description)
+				.category(category)
+				.completed(completed)
+				.build();
 	}
 
-	// payload for partial update
 	public static Notes partialUpdateNotePayload() {
 		completed = true;
-		return Notes.builder().completed(completed).build();
+		return Notes.builder()
+				.completed(completed)
+				.build();
 	}
 
 }

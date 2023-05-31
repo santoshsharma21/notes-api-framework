@@ -14,7 +14,7 @@ import lombok.Data;
  */
 @JsonInclude(JsonInclude.Include.NON_NULL)
 @Data
-@Builder
+@Builder(toBuilder = true)
 public class Notes {
 
 	private String title;
