@@ -18,9 +18,9 @@ Link :- https://practice.expandtesting.com/notes/api/api-docs/#/
 
 
 ## TEST REPORT SCREENSHOTS :-
-![pic_1](reportsnaps/pic_1)
+![pic_1](reportsnaps/pic_1.png)
 
-![pic_2](reportsnaps/pic_2)
+![pic_2](reportsnaps/pic_2.png)
 
 ### Jenkins
 ![pic_3]()
