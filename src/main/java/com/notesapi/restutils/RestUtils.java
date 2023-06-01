@@ -162,24 +162,24 @@ public class RestUtils {
 		QueryableRequestSpecification reqQuery = SpecificationQuerier.query(requestSpec);
 		ReportLogger.logInfoDetails("Endpoint - " + endpoint);
 		ReportLogger.logInfoDetails("Request Method - " + method);
-		ReportLogger.logInfoDetails("Request Headers");
-		ReportLogger.logHeaderInTableFormat(reqQuery.getHeaders().asList());
+//		ReportLogger.logInfoDetails("Request Headers");
+//		ReportLogger.logHeaderInTableFormat(reqQuery.getHeaders().asList());
 		ReportLogger.logInfoDetails("Request Body");
 		ReportLogger.logJsonDetails(reqQuery.getBody().toString());
 	}
 	
 	public static void printRequestDetails(String endpoint, RequestSpecification requestSpec, String method) {
-		QueryableRequestSpecification reqQuery = SpecificationQuerier.query(requestSpec);
+//		QueryableRequestSpecification reqQuery = SpecificationQuerier.query(requestSpec);
 		ReportLogger.logInfoDetails("Endpoint - " + endpoint);
 		ReportLogger.logInfoDetails("Request Method - " + method);
-		ReportLogger.logInfoDetails("Request Headers");
-		ReportLogger.logHeaderInTableFormat(reqQuery.getHeaders().asList());
+//		ReportLogger.logInfoDetails("Request Headers");
+//		ReportLogger.logHeaderInTableFormat(reqQuery.getHeaders().asList());
 	}
 
 	public static void printResponseDetails(Response response) {
 		ReportLogger.logInfoDetails("Status code - " + response.getStatusCode());
-		ReportLogger.logInfoDetails("Response Headers");
-		ReportLogger.logHeaderInTableFormat(response.getHeaders().asList());
+//		ReportLogger.logInfoDetails("Response Headers");
+//		ReportLogger.logHeaderInTableFormat(response.getHeaders().asList());
 		ReportLogger.logInfoDetails("Response Details");
 		ReportLogger.logJsonDetails(response.getBody().prettyPrint());
 	}

@@ -1,37 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="11" passed="10" failed="1" skipped="0">
+<testng-results ignored="0" total="6" passed="0" failed="6" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-05-27T18:25:48 IST" name="Suite" finished-at="2023-05-27T18:26:08 IST" duration-ms="19989">
+  <suite started-at="2023-06-01T16:03:23 IST" name="Default suite" finished-at="2023-06-01T16:03:35 IST" duration-ms="12013">
     <groups>
     </groups>
-    <test started-at="2023-05-27T18:25:48 IST" name="Test" finished-at="2023-05-27T18:26:08 IST" duration-ms="19989">
+    <test started-at="2023-06-01T16:03:23 IST" name="Default test" finished-at="2023-06-01T16:03:35 IST" duration-ms="12013">
       <class name="com.notesapi.tests.UsersTests">
-        <test-method signature="createNewUser()[pri:0, instance:com.notesapi.tests.UsersTests@694abbdc]" started-at="2023-05-27T18:25:49 IST" name="createNewUser" finished-at="2023-05-27T18:25:59 IST" duration-ms="9866" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- createNewUser -->
-        <test-method signature="performLogin(org.testng.ITestContext)[pri:1, instance:com.notesapi.tests.UsersTests@694abbdc]" started-at="2023-05-27T18:25:59 IST" name="performLogin" finished-at="2023-05-27T18:26:00 IST" duration-ms="1073" status="FAIL">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[org.testng.TestRunner@b671dda]]>
-              </value>
-            </param>
-          </params>
-          <exception class="java.lang.AssertionError">
+        <test-method signature="createNewUser()[pri:0, instance:com.notesapi.tests.UsersTests@71809907]" started-at="2023-06-01T16:03:23 IST" name="createNewUser" finished-at="2023-06-01T16:03:34 IST" duration-ms="10806" status="FAIL">
+          <exception class="java.lang.NullPointerException">
             <message>
-              <![CDATA[expected [201] but found [200]]]>
+              <![CDATA[Cannot invoke "com.aventstack.extentreports.ExtentTest.info(com.aventstack.extentreports.markuputils.Markup)" because "com.notesapi.extentreport.ReportManager.test" is null]]>
             </message>
             <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: expected [201] but found [200]
-at org.testng.Assert.fail(Assert.java:110)
-at org.testng.Assert.failNotEquals(Assert.java:1413)
-at org.testng.Assert.assertEqualsImpl(Assert.java:149)
-at org.testng.Assert.assertEquals(Assert.java:131)
-at org.testng.Assert.assertEquals(Assert.java:1240)
-at org.testng.Assert.assertEquals(Assert.java:1274)
-at com.notesapi.tests.UsersTests.performLogin(UsersTests.java:44)
+              <![CDATA[java.lang.NullPointerException: Cannot invoke "com.aventstack.extentreports.ExtentTest.info(com.aventstack.extentreports.markuputils.Markup)" because "com.notesapi.extentreport.ReportManager.test" is null
+at com.notesapi.extentreport.ReportLogger.logInfoDetails(ReportLogger.java:21)
+at com.notesapi.restutils.RestUtils.printRequestDetails(RestUtils.java:163)
+at com.notesapi.restutils.RestUtils.post(RestUtils.java:28)
+at com.notesapi.helper.UsersHelper.registerUser(UsersHelper.java:18)
+at com.notesapi.tests.UsersTests.createNewUser(UsersTests.java:28)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
 at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -62,60 +49,298 @@ at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 ]]>
             </full-stacktrace>
-          </exception> <!-- java.lang.AssertionError -->
+          </exception> <!-- java.lang.NullPointerException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- performLogin -->
-        <test-method signature="retrieveUserInfo()[pri:2, instance:com.notesapi.tests.UsersTests@694abbdc]" started-at="2023-05-27T18:26:00 IST" name="retrieveUserInfo" finished-at="2023-05-27T18:26:02 IST" duration-ms="1966" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- retrieveUserInfo -->
-        <test-method signature="editUserInfo()[pri:3, instance:com.notesapi.tests.UsersTests@694abbdc]" started-at="2023-05-27T18:26:02 IST" name="editUserInfo" finished-at="2023-05-27T18:26:02 IST" duration-ms="676" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- editUserInfo -->
-        <test-method signature="editUserPassword()[pri:4, instance:com.notesapi.tests.UsersTests@694abbdc]" started-at="2023-05-27T18:26:02 IST" name="editUserPassword" finished-at="2023-05-27T18:26:03 IST" duration-ms="1077" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- editUserPassword -->
-      </class> <!-- com.notesapi.tests.UsersTests -->
-      <class name="com.notesapi.tests.NotesTests">
-        <test-method is-config="true" signature="beforeClass(org.testng.ITestContext)[pri:0, instance:com.notesapi.tests.NotesTests@1d2adfbe]" started-at="2023-05-27T18:26:03 IST" name="beforeClass" finished-at="2023-05-27T18:26:04 IST" duration-ms="85" status="PASS">
+        </test-method> <!-- createNewUser -->
+        <test-method signature="performLogin(org.testng.ITestContext)[pri:1, instance:com.notesapi.tests.UsersTests@71809907]" started-at="2023-06-01T16:03:34 IST" name="performLogin" finished-at="2023-06-01T16:03:35 IST" duration-ms="772" status="FAIL">
           <params>
             <param index="0">
               <value>
-                <![CDATA[org.testng.TestRunner@b671dda]]>
+                <![CDATA[org.testng.TestRunner@5018b56b]]>
               </value>
             </param>
           </params>
+          <exception class="java.lang.NullPointerException">
+            <message>
+              <![CDATA[Cannot invoke "com.aventstack.extentreports.ExtentTest.info(com.aventstack.extentreports.markuputils.Markup)" because "com.notesapi.extentreport.ReportManager.test" is null]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.NullPointerException: Cannot invoke "com.aventstack.extentreports.ExtentTest.info(com.aventstack.extentreports.markuputils.Markup)" because "com.notesapi.extentreport.ReportManager.test" is null
+at com.notesapi.extentreport.ReportLogger.logInfoDetails(ReportLogger.java:21)
+at com.notesapi.restutils.RestUtils.printRequestDetails(RestUtils.java:163)
+at com.notesapi.restutils.RestUtils.post(RestUtils.java:28)
+at com.notesapi.helper.UsersHelper.userLogin(UsersHelper.java:22)
+at com.notesapi.tests.UsersTests.performLogin(UsersTests.java:38)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:969)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:829)
+at org.testng.TestRunner.run(TestRunner.java:602)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:437)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:431)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:391)
+at org.testng.SuiteRunner.run(SuiteRunner.java:330)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
+at org.testng.TestNG.runSuites(TestNG.java:1099)
+at org.testng.TestNG.run(TestNG.java:1067)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.NullPointerException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- beforeClass -->
-        <test-method signature="createNewNote()[pri:0, instance:com.notesapi.tests.NotesTests@1d2adfbe]" started-at="2023-05-27T18:26:04 IST" name="createNewNote" finished-at="2023-05-27T18:26:04 IST" duration-ms="766" status="PASS">
+        </test-method> <!-- performLogin -->
+        <test-method signature="retrieveUserInfo()[pri:2, instance:com.notesapi.tests.UsersTests@71809907]" started-at="2023-06-01T16:03:35 IST" name="retrieveUserInfo" finished-at="2023-06-01T16:03:35 IST" duration-ms="17" status="FAIL">
+          <exception class="java.lang.IllegalArgumentException">
+            <message>
+              <![CDATA[Header value cannot be null]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.IllegalArgumentException: Header value cannot be null
+at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+at org.codehaus.groovy.reflection.CachedConstructor.invoke(CachedConstructor.java:73)
+at org.codehaus.groovy.reflection.CachedConstructor.doConstructorInvoke(CachedConstructor.java:60)
+at org.codehaus.groovy.runtime.callsite.ConstructorSite$ConstructorSiteNoUnwrap.callConstructor(ConstructorSite.java:86)
+at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCallConstructor(CallSiteArray.java:57)
+at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:263)
+at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:277)
+at io.restassured.internal.common.assertion.AssertParameter.notNull(AssertParameter.groovy:26)
+at io.restassured.internal.common.assertion.AssertParameter$notNull.callStatic(Unknown Source)
+at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCallStatic(CallSiteArray.java:53)
+at io.restassured.internal.common.assertion.AssertParameter$notNull.callStatic(Unknown Source)
+at io.restassured.internal.RequestSpecificationImpl.header(RequestSpecificationImpl.groovy:869)
+at com.notesapi.restutils.RestUtils.get(RestUtils.java:49)
+at com.notesapi.helper.UsersHelper.getUserInfo(UsersHelper.java:26)
+at com.notesapi.tests.UsersTests.retrieveUserInfo(UsersTests.java:51)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:969)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:829)
+at org.testng.TestRunner.run(TestRunner.java:602)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:437)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:431)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:391)
+at org.testng.SuiteRunner.run(SuiteRunner.java:330)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
+at org.testng.TestNG.runSuites(TestNG.java:1099)
+at org.testng.TestNG.run(TestNG.java:1067)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.IllegalArgumentException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- createNewNote -->
-        <test-method signature="retrieveNote()[pri:1, instance:com.notesapi.tests.NotesTests@1d2adfbe]" started-at="2023-05-27T18:26:04 IST" name="retrieveNote" finished-at="2023-05-27T18:26:05 IST" duration-ms="543" status="PASS">
+        </test-method> <!-- retrieveUserInfo -->
+        <test-method signature="editUserInfo()[pri:3, instance:com.notesapi.tests.UsersTests@71809907]" started-at="2023-06-01T16:03:35 IST" name="editUserInfo" finished-at="2023-06-01T16:03:35 IST" duration-ms="16" status="FAIL">
+          <exception class="java.lang.IllegalArgumentException">
+            <message>
+              <![CDATA[Header value cannot be null]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.IllegalArgumentException: Header value cannot be null
+at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+at org.codehaus.groovy.reflection.CachedConstructor.invoke(CachedConstructor.java:73)
+at org.codehaus.groovy.reflection.CachedConstructor.doConstructorInvoke(CachedConstructor.java:60)
+at org.codehaus.groovy.runtime.callsite.ConstructorSite$ConstructorSiteNoUnwrap.callConstructor(ConstructorSite.java:86)
+at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:277)
+at io.restassured.internal.common.assertion.AssertParameter.notNull(AssertParameter.groovy:26)
+at io.restassured.internal.common.assertion.AssertParameter$notNull.callStatic(Unknown Source)
+at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCallStatic(CallSiteArray.java:53)
+at io.restassured.internal.common.assertion.AssertParameter$notNull.callStatic(Unknown Source)
+at io.restassured.internal.RequestSpecificationImpl.header(RequestSpecificationImpl.groovy:869)
+at com.notesapi.restutils.RestUtils.patch(RestUtils.java:107)
+at com.notesapi.helper.UsersHelper.updateUserInfo(UsersHelper.java:30)
+at com.notesapi.tests.UsersTests.editUserInfo(UsersTests.java:60)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:969)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:829)
+at org.testng.TestRunner.run(TestRunner.java:602)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:437)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:431)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:391)
+at org.testng.SuiteRunner.run(SuiteRunner.java:330)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
+at org.testng.TestNG.runSuites(TestNG.java:1099)
+at org.testng.TestNG.run(TestNG.java:1067)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.IllegalArgumentException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- retrieveNote -->
-        <test-method signature="retrieveNoteById()[pri:2, instance:com.notesapi.tests.NotesTests@1d2adfbe]" started-at="2023-05-27T18:26:05 IST" name="retrieveNoteById" finished-at="2023-05-27T18:26:05 IST" duration-ms="594" status="PASS">
+        </test-method> <!-- editUserInfo -->
+        <test-method signature="editUserPassword()[pri:4, instance:com.notesapi.tests.UsersTests@71809907]" started-at="2023-06-01T16:03:35 IST" name="editUserPassword" finished-at="2023-06-01T16:03:35 IST" duration-ms="21" status="FAIL">
+          <exception class="java.lang.IllegalArgumentException">
+            <message>
+              <![CDATA[Header value cannot be null]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.IllegalArgumentException: Header value cannot be null
+at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+at org.codehaus.groovy.reflection.CachedConstructor.invoke(CachedConstructor.java:73)
+at org.codehaus.groovy.reflection.CachedConstructor.doConstructorInvoke(CachedConstructor.java:60)
+at org.codehaus.groovy.runtime.callsite.ConstructorSite$ConstructorSiteNoUnwrap.callConstructor(ConstructorSite.java:86)
+at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:277)
+at io.restassured.internal.common.assertion.AssertParameter.notNull(AssertParameter.groovy:26)
+at io.restassured.internal.common.assertion.AssertParameter$notNull.callStatic(Unknown Source)
+at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCallStatic(CallSiteArray.java:53)
+at io.restassured.internal.common.assertion.AssertParameter$notNull.callStatic(Unknown Source)
+at io.restassured.internal.RequestSpecificationImpl.header(RequestSpecificationImpl.groovy:869)
+at com.notesapi.restutils.RestUtils.post(RestUtils.java:36)
+at com.notesapi.helper.UsersHelper.changeUserPassword(UsersHelper.java:34)
+at com.notesapi.tests.UsersTests.editUserPassword(UsersTests.java:72)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:969)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:829)
+at org.testng.TestRunner.run(TestRunner.java:602)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:437)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:431)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:391)
+at org.testng.SuiteRunner.run(SuiteRunner.java:330)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
+at org.testng.TestNG.runSuites(TestNG.java:1099)
+at org.testng.TestNG.run(TestNG.java:1067)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.IllegalArgumentException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- retrieveNoteById -->
-        <test-method signature="updateExistingNote()[pri:3, instance:com.notesapi.tests.NotesTests@1d2adfbe]" started-at="2023-05-27T18:26:05 IST" name="updateExistingNote" finished-at="2023-05-27T18:26:06 IST" duration-ms="692" status="PASS">
+        </test-method> <!-- editUserPassword -->
+        <test-method signature="performLogout()[pri:5, instance:com.notesapi.tests.UsersTests@71809907]" started-at="2023-06-01T16:03:35 IST" name="performLogout" finished-at="2023-06-01T16:03:35 IST" duration-ms="14" status="FAIL">
+          <exception class="java.lang.IllegalArgumentException">
+            <message>
+              <![CDATA[Header value cannot be null]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.IllegalArgumentException: Header value cannot be null
+at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+at org.codehaus.groovy.reflection.CachedConstructor.invoke(CachedConstructor.java:73)
+at org.codehaus.groovy.reflection.CachedConstructor.doConstructorInvoke(CachedConstructor.java:60)
+at org.codehaus.groovy.runtime.callsite.ConstructorSite$ConstructorSiteNoUnwrap.callConstructor(ConstructorSite.java:86)
+at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:277)
+at io.restassured.internal.common.assertion.AssertParameter.notNull(AssertParameter.groovy:26)
+at io.restassured.internal.common.assertion.AssertParameter$notNull.callStatic(Unknown Source)
+at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCallStatic(CallSiteArray.java:53)
+at io.restassured.internal.common.assertion.AssertParameter$notNull.callStatic(Unknown Source)
+at io.restassured.internal.RequestSpecificationImpl.header(RequestSpecificationImpl.groovy:869)
+at com.notesapi.restutils.RestUtils.delete(RestUtils.java:136)
+at com.notesapi.helper.UsersHelper.userLogout(UsersHelper.java:38)
+at com.notesapi.tests.UsersTests.performLogout(UsersTests.java:80)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:969)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:829)
+at org.testng.TestRunner.run(TestRunner.java:602)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:437)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:431)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:391)
+at org.testng.SuiteRunner.run(SuiteRunner.java:330)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
+at org.testng.TestNG.runSuites(TestNG.java:1099)
+at org.testng.TestNG.run(TestNG.java:1067)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.IllegalArgumentException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- updateExistingNote -->
-        <test-method signature="updateCompleteStatusOfNote()[pri:4, instance:com.notesapi.tests.NotesTests@1d2adfbe]" started-at="2023-05-27T18:26:06 IST" name="updateCompleteStatusOfNote" finished-at="2023-05-27T18:26:07 IST" duration-ms="680" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- updateCompleteStatusOfNote -->
-        <test-method signature="deleteNoteById()[pri:5, instance:com.notesapi.tests.NotesTests@1d2adfbe]" started-at="2023-05-27T18:26:07 IST" name="deleteNoteById" finished-at="2023-05-27T18:26:08 IST" duration-ms="683" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- deleteNoteById -->
-      </class> <!-- com.notesapi.tests.NotesTests -->
-    </test> <!-- Test -->
-  </suite> <!-- Suite -->
+        </test-method> <!-- performLogout -->
+      </class> <!-- com.notesapi.tests.UsersTests -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
 </testng-results>

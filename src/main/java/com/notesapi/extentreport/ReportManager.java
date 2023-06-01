@@ -29,11 +29,11 @@ public class ReportManager {
 		String fullPath = System.getProperty("user.dir") + "/reports/" + fileName;
 		
 		spark = new ExtentSparkReporter(fullPath);
-		spark.config().setReportName("Test Execution Report");
+		spark.config().setReportName("Automation Test Suite Execution Report");
 		spark.config().setTheme(Theme.DARK);
 		spark.config().setEncoding("UTF-8");
-		spark.viewConfigurer().viewOrder().as(new ViewName[] { ViewName.DASHBOARD, ViewName.TEST, ViewName.AUTHOR,
-				ViewName.DEVICE, ViewName.EXCEPTION }).apply();
+		spark.viewConfigurer().viewOrder().as(new ViewName[] { ViewName.DASHBOARD, ViewName.TEST,
+				ViewName.DEVICE, ViewName.EXCEPTION, ViewName.AUTHOR}).apply();
 		
 		reports = new ExtentReports();
 		reports.attachReporter(spark);

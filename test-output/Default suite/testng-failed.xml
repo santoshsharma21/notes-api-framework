@@ -5,7 +5,12 @@
     <classes>
       <class name="com.notesapi.tests.UsersTests">
         <methods>
+          <include name="retrieveUserInfo"/>
+          <include name="performLogout"/>
+          <include name="editUserInfo"/>
           <include name="createNewUser"/>
+          <include name="performLogin" invocation-numbers="0"/>
+          <include name="editUserPassword"/>
         </methods>
       </class> <!-- com.notesapi.tests.UsersTests -->
     </classes>
