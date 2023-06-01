@@ -23,7 +23,7 @@ Link :- https://practice.expandtesting.com/notes/api/api-docs/#/
 ![pic_2](reportsnaps/pic_2.png)
 
 ### Jenkins
-![pic_3](reportsnaps/jenkins_1)
+![pic_3](reportsnaps/jenkins_1.png)
 
 ## TOOLS AND TECHNOLOGY USED :-
 * Java
